@@ -12,11 +12,13 @@ function Details() {
         axios.get(`http://localhost:5005/api/phones/${id}`)
         
         .then((response)=>{
-            console.log(response.data)
+
             setdetails(response.data)})        
         .catch((error) => console.log(error));
     },[id])
 
+
+    if (Object.keys(details).length === 0) <p>Loading...</p>
 
     return(
         <div className= 'phone-details'>

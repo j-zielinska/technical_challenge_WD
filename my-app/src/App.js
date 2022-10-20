@@ -22,7 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
       <Phones phones={phones} />
       <Routes>
         <Route path={'/:id'} element={<Details />}/>
